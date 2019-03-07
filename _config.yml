@@ -17,3 +17,5 @@ gitlab_username:  kassio
 # Build settings
 markdown: kramdown
 exclude: ["README.md"]
+
+theme: jekyll-theme-cayman
