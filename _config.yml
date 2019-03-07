@@ -10,9 +10,22 @@ title: Kassio Borges
 email: kassioborgesm@gmail.com
 baseurl: ""
 url: "/"
-twitter_username: kassioborgesm
-github_username:  kassio
-gitlab_username:  kassio
+contact_list:
+  - name: "kassioborgesm@gmail.com"
+    url: "mailto:kassioborgesm@gmail.com"
+    icon: "icon-gmail.svg"
+  - name: kassioborgesm
+    url: "https://twitter.com/kassioborgesm"
+    icon: "icon-twitter.svg"
+  - name: kassioborges
+    url: "https://www.linkedin.com/in/kassioborges"
+    icon: "icon-linkedin.svg"
+  - name: kassio
+    url: "http://github.com/kassio"
+    icon: "icon-github.svg"
+  - name: "feed"
+    url: "/feed.xml"
+    icon: "icon-feed.svg"
 
 # Build settings
 markdown: kramdown

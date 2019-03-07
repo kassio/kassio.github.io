@@ -1,0 +1,11 @@
+<ul class="contact-list">
+  {% for contact in site.contact_list %}
+  <li>
+    <a target="_blank" href="{{contact.url}}" title="{{contact.name}}">
+      <span class="icon icon--github">
+        {% include {{contact.icon}} %}
+      </span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
