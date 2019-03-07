@@ -42,10 +42,9 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.4.0)
-  tzinfo-data
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.6.1p33
 
 BUNDLED WITH
-   1.13.6
+   1.17.2
