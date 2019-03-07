@@ -16,4 +16,4 @@ gitlab_username:  kassio
 
 # Build settings
 markdown: kramdown
-exclude: ["README.md"]
+exclude: ["bin/*", "README.md"]
