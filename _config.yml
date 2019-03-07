@@ -8,6 +8,7 @@
 # Site settings
 title: Kassio Borges
 email: kassioborgesm@gmail.com
+baseurl: ""
 url: "/"
 twitter_username: kassioborgesm
 github_username:  kassio
