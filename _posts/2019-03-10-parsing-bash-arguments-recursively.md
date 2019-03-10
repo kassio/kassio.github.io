@@ -38,32 +38,30 @@ solutions](https://medium.com/@Drew_Stokes/bash-argument-parsing-54f3b81a6a8f)
 like
 
 ```bash
-while true
-do
-  case $1 in
-    -a|--option-a)
-      option_a=$2
+#!/bin/bash
+PARAMS=""
+while (( "$#" )); do
+  case "$1" in
+    -f|--flag-with-argument)
+      FARG=$2
       shift 2
-      parse_args $@
       ;;
-
-    -b|--option-b)
-      option_b=$2
-      shift 2
-      parse_args $@
+    --) # end argument parsing
+      shift
+      break
       ;;
-
-    -c|--option-c)
-      option_c=$2
-      shift 2
-      parse_args $@
+    -*|--*=) # unsupported flags
+      echo "Error: Unsupported flag $1" >&2
+      exit 1
       ;;
-
-    *)
-      do_whatever $@
+    *) # preserve positional arguments
+      PARAMS="$PARAMS $1"
+      shift
       ;;
   esac
 done
+# set positional arguments in their proper place
+eval set -- "$PARAMS"
 ```
 
 This is a great solution, it basically loops through the arguments checking if
