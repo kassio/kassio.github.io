@@ -1,25 +1,47 @@
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-  margin: 0;
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+ul {
   padding: 0;
+  margin: 0;
 }
 
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
+  text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+
+
+blockquote,
+dl,
+figure,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+pre,
+h1,
+p,
+ul,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
@@ -37,7 +59,8 @@ figcaption {
   font-size: $small-font-size;
 }
 
-ul, ol {
+ol,
+ul {
   margin-left: $spacing-unit;
 }
 
@@ -48,7 +71,12 @@ li {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $base-font-weight;
 }
 
@@ -67,12 +95,12 @@ a {
 }
 
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   font-size: 18px;
-  letter-spacing: -1px;
   font-style: italic;
+  color: $grey-color;
+  letter-spacing: -1px;
+  border-left: 4px solid $grey-color-light;
 
   > :last-child {
     margin-bottom: 0;
@@ -82,9 +110,9 @@ blockquote {
 pre,
 code {
   font-size: 15px;
+  background-color: #eef;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
 }
 
 code {
@@ -96,34 +124,31 @@ pre {
   overflow-x: auto;
 
   > code {
-    border: 0;
     padding-right: 0;
     padding-left: 0;
+    border: 0;
   }
 }
 
 .wrapper {
   @extend %clearfix;
 
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
-  @extend %clearfix;
+  margin-right: auto;
+  margin-left: auto;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
 }
 
 %clearfix {
-  &:after {
-    content: "";
+  &::after {
+    content: '';
     display: table;
     clear: both;
   }

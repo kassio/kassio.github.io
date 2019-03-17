@@ -1,48 +1,52 @@
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: 56px;
-
   position: relative;
+  min-height: 56px;
+  margin-top: 10px;
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 56px;
+  font-size: 2.2em;
+  font-weight: 400;
   letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
 
   &,
   &:visited {
     color: $grey-color-dark;
   }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .my-avatar {
+    width: 100px;
+    border-radius: 100px;
+  }
 }
 
 .site-nav {
   float: right;
-  line-height: 56px;
+  line-height: 100px;
 }
 
 
 .site-footer {
-  border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  border-top: 1px solid $grey-color-light;
 }
 
 .footer-heading {
-  font-size: 18px;
   margin-bottom: $spacing-unit / 2;
+  font-size: 18px;
 }
 
 .contact-list {
-  list-style: none;
   margin-left: 0;
+  list-style: none;
 
   li {
-    margin-bottom: 0.2em;
     display: inline-block;
+    margin-bottom: .2em;
   }
 }
 
@@ -79,8 +83,8 @@
 
 .post-title {
   font-size: 42px;
-  letter-spacing: -1px;
   line-height: 1;
+  letter-spacing: -1px;
 
   @include media-query($on-laptop) {
     font-size: 36px;
