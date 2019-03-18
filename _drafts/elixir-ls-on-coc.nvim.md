@@ -3,13 +3,19 @@ layout: post
 title: "elixir-ls with coc.nvim"
 ---
 
-There's a very good [blog post](https://www.mitchellhanberg.com/post/2018/10/18/how-to-use-elixir-ls-with-vim/) about how to use [elixir-ls]() with [ale]().
+There's a very good [blog
+post](https://www.mitchellhanberg.com/post/2018/10/18/how-to-use-elixir-ls-with-vim/)
+about how to use [elixir-ls]() with [ale]().
 
-But, if you have been followig the neovim udpates about what's to come on nvim 0.4, you're probably excited with the new floating window feature. Well, I got very excited when I saw this [nvim's tweet](https://twitter.com/Neovim/status/1101893773561348096)
+But, if you have been followig the neovim udpates about what's to come on nvim
+0.4, you're probably excited with the new floating window feature. Well, I got
+very excited when I saw this [nvim's
+tweet](https://twitter.com/Neovim/status/1101893773561348096)
 
 ![neovim-floating-window](/assets/nvim-floating-window.gif)
 
-This tweet shows how [coc.nvim]() is getting ready for the new feature, so I decided to give it a try with elixir-ls.
+This tweet shows how [coc.nvim]() is getting ready for the new feature, so I
+decided to give it a try with elixir-ls.
 
 With [vim-plug](https://github.com/junegunn/vim-plug)
 ```vimscript
