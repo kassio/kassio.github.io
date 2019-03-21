@@ -50,7 +50,7 @@ function! g:elixirls.compile(...)
     \ ], '&&')
 
   echom '>>> Compiling elixir-ls'
-  call system(l:commands)
+  silent call system(l:commands)
   echom '>>> elixir-ls compiled'
 endfunction
 
@@ -98,7 +98,7 @@ function! g:elixirls.compile(...)
     \ ], '&&')
 
   echom '>>> Compiling elixirls'
-  call system(l:commands)
+  silent call system(l:commands)
   echom '>>> elixirls compiled'
 endfunction
 
