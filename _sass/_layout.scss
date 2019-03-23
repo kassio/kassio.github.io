@@ -33,6 +33,30 @@
 .site-footer {
   padding: $spacing-unit 0;
   border-top: 1px solid $grey-color-light;
+
+  .contact-list {
+    float: left;
+    width: 40%;
+  }
+
+  .tags-list {
+    float: right;
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline;
+    }
+
+    li > a,
+    li > a:visited {
+      font-size: $small-font-size;
+      color: $grey-color;
+      text-decoration: none;
+    }
+  }
 }
 
 .footer-heading {
@@ -67,11 +91,6 @@
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
-
 .post-link {
   display: block;
   font-size: 24px;
@@ -79,6 +98,34 @@
 
 .post-header {
   margin-bottom: $spacing-unit;
+
+  .post-meta {
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  .tags-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      line-height: 1;
+    }
+
+    li > a,
+    li > a:visited {
+      font-size: $small-font-size;
+      color: $grey-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
 }
 
 .post-title {
