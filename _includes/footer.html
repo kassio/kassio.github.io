@@ -3,9 +3,10 @@
     {% include contact-list.html %}
 
     <ul class="tags-list">
-      {% for tag in site.tags %}
+      {% for rawtag in site.tags %}
+      {% assign tag=rawtag[0] %}
       <li>
-        {% include tag-link.html tag=tag[0] %}
+        {% include tag-link.html tag=tag %}
       </li>
       {% endfor %}
     </ul>
