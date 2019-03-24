@@ -5,7 +5,7 @@
     <ul class="tags-list">
       {% for tag in site.tags %}
       <li>
-        <a href="/tags/{{tag[0]}}">{{ tag[0] }}</a>
+        {% include tag-link.html tag=tag[0] %}
       </li>
       {% endfor %}
     </ul>
