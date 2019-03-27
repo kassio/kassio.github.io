@@ -2,13 +2,6 @@
   <div class="wrapper">
     {% include contact-list.html %}
 
-    <ul class="tags-list">
-      {% for rawtag in site.tags %}
-      {% assign tag=rawtag[0] %}
-      <li>
-        {% include tag-link.html tag=tag %}
-      </li>
-      {% endfor %}
-    </ul>
+    <a class="all-topics" href="/topics">All topics</a>
   </div>
 </footer>

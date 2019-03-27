@@ -38,25 +38,6 @@
     float: left;
     width: 40%;
   }
-
-  .tags-list {
-    float: right;
-    width: 40%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    li {
-      display: inline;
-    }
-
-    li > a,
-    li > a:visited {
-      font-size: $small-font-size;
-      color: $grey-color;
-      text-decoration: none;
-    }
-  }
 }
 
 .footer-heading {
@@ -104,19 +85,18 @@
     line-height: 1;
   }
 
-  .tags-list {
+  .topics-list {
     padding: 0;
     margin: 0;
     list-style: none;
 
     li {
       display: inline-block;
-      line-height: 1;
     }
 
-    li > a,
-    li > a:visited {
+    li a {
       font-size: $small-font-size;
+      line-height: 1;
       color: $grey-color;
       text-decoration: none;
     }
@@ -163,5 +143,34 @@
     @include media-query($on-laptop) {
       font-size: 18px;
     }
+  }
+}
+
+.all-topics {
+  font-size: 1.2em;
+  color: $text-color;
+}
+
+.topics {
+  list-style: none;
+}
+
+.topics.single .topic.show {
+  display: initial;
+}
+
+.topics.single .topic:not(.show) {
+  display: none;
+}
+
+.topic-title,
+.topic-title:visited {
+  color: $text-color;
+}
+
+.topic-post {
+  a,
+  a:visited {
+    color: $grey-color;
   }
 }

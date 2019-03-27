@@ -30,17 +30,3 @@ contact_list:
 # Build settings
 markdown: kramdown
 exclude: ["bin/*", "README.md"]
-
-plugins:
-  - jekyll-archives
-
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - tags
-  layout: archive
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    tag: '/tag/:name/'
