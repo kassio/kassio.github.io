@@ -12,13 +12,7 @@ layout: default
         {{ page.date | date: "%b %-d, %Y" }}
       </time>
 
-    <ul class="topics-list">
-    {% for tag in page.tags %}
-      <li>
-        <a href="/topics#{{tag}}">{{tag}}</a>
-      </li>
-    {% endfor %}
-    </ul>
+      {% include topics.html tags=page.tags %}
   </header>
 
   <div class="post-content" itemprop="articleBody">

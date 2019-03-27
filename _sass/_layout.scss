@@ -85,22 +85,6 @@
     line-height: 1;
   }
 
-  .topics-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    li {
-      display: inline-block;
-    }
-
-    li a {
-      font-size: $small-font-size;
-      line-height: 1;
-      color: $grey-color;
-      text-decoration: none;
-    }
-  }
 }
 
 .post-meta {
@@ -143,6 +127,23 @@
     @include media-query($on-laptop) {
       font-size: 18px;
     }
+  }
+}
+
+.topics-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+
+  li a {
+    font-size: $small-font-size;
+    line-height: 1;
+    color: $grey-color;
+    text-decoration: none;
   }
 }
 

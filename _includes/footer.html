@@ -2,6 +2,13 @@
   <div class="wrapper">
     {% include contact-list.html %}
 
-    <a class="all-topics" href="/topics">All topics</a>
+    {% assign alltags = "" %}
+    {% for tag in site.tags %}
+      {% assign alltags = alltags | append: tag[0] | append: "|" %}
+    {% endfor %}
+    {% assign alltags = alltags | split:'|' | sort %}
+
+
+    {% include topics.html tags=alltags %}
   </div>
 </footer>
