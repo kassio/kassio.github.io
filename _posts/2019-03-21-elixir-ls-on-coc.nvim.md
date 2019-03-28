@@ -2,7 +2,6 @@
 layout: post
 title: "elixir-ls with coc.nvim"
 tags:
-  - vim
   - neovim
   - elixir
   - lsp
