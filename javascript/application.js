@@ -1,35 +1,51 @@
-function clearTopicSelection() {
+let app = {};
+
+app.clearTopicSelection = function () {
   window.location.hash = '';
 }
 
-function selectTopic() {
+app.selectTopic = function () {
   const location = window.location;
 
-  if (location.pathname !== '/topics') {
-    return;
-  } else {
-    function showOnlyTopic(id) {
+  if (location.pathname === '/topics') {
+    const showOnlyTopic = function (id) {
+      clearShowTopics();
       document.getElementById('topics-list').classList.add('single');
       document.getElementById(id).classList.add('show');
     }
 
-    function showAll() {
+    const showAll = function () {
+      clearShowTopics();
       document.getElementById('topics-list').classList.remove('single');
+    }
+
+    const clearShowTopics = function () {
       document.querySelectorAll('.topics .topic').forEach(topic => {
         topic.classList.remove('show');
       });
     }
 
     if (location.hash !== '') {
-      const topic = location.hash.replace('#', '');
+      const encodedTopic = location.hash.replace('#', '');
+      const topic = decodeURIComponent(encodedTopic);
       const topicElementId = `topic-${topic}`;
 
       showOnlyTopic(topicElementId);
     } else {
       showAll();
     }
+  } else {
+    return;
   }
 }
 
-document.addEventListener('DOMContentLoaded', selectTopic, false);
-window.addEventListener('hashchange', selectTopic, false);
+document.addEventListener(
+  'DOMContentLoaded',
+  app.selectTopic,
+  false
+);
+window.addEventListener(
+  'hashchange',
+  app.selectTopic,
+  false
+);

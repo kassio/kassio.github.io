@@ -8,7 +8,7 @@ layout: default
 {% endfor %}
 {% assign tags = tags | split:'|' | sort %}
 
-<a class="all-topics" href="javascript:clearTopicSelection();">All topics</a>
+<a class="all-topics" href="javascript:app.clearTopicSelection();">All topics</a>
 
 <ul class="topics" id="topics-list">
   {% for tag in tags %}
