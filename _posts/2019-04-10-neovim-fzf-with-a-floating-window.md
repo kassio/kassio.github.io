@@ -5,11 +5,11 @@ tags:
 - neovim
 date: 2019-04-10 23:07 +0100
 ---
-I [already mentioned]({{ site.baseurl }}{% post_url 2019-03-21-elixir-ls-on-coc.nvim %})
+I [already mentioned]({{ site.baseurl }}{% post_url 2019-03-21-elixir-ls-on-coc.nvim %}){:target="_blank"}
 the floating window feature that's coming with the next version of neovim. This
 opens a whole new world of possibilities with neovim.
 
-One nice possibility is the power of using [fzf.vim](https://github.com/junegunn/fzf.vim)
+One nice possibility is the power of using [fzf.vim](https://github.com/junegunn/fzf.vim){:target="_blank"}
 with a floating window:
 
 ![neovim-fzf-floating-window](/assets/nvim-fzf-floating-window.png)
@@ -53,6 +53,6 @@ endfunction
 ```
 
 #### Reference
-- [https://github.com/junegunn/fzf.vim/issues/664](https://github.com/junegunn/fzf.vim/issues/664)
+- [https://github.com/junegunn/fzf.vim/issues/664](https://github.com/junegunn/fzf.vim/issues/664){:target="_blank"}
 
 And that's it.😁

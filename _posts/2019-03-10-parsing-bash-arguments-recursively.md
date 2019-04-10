@@ -10,7 +10,7 @@ tags:
 
 I'm a lazy developer, who tries to create scripts to automatize most of my daily
 mechanical activities. And because of that I have many many scripts on my
-[dotfiles](https://github.com/kassio/dotfiles).
+[dotfiles](https://github.com/kassio/dotfiles){:target="_blank"}.
 
 Some of my scripts require arguments and often, due to my lack of memory, I had
 to research the best way to part arguments in bash. Usually I need to parse
@@ -37,7 +37,7 @@ other values right here
 # The usual solution
 
 When researching usually I [found
-solutions](https://medium.com/@Drew_Stokes/bash-argument-parsing-54f3b81a6a8f)
+solutions](https://medium.com/@Drew_Stokes/bash-argument-parsing-54f3b81a6a8f){:target="_blank"}
 like
 
 ```bash
@@ -74,9 +74,9 @@ and remove it from the list of arguments and move to the next.
 # The recursive solution
 
 The example above is a very common pattern when working with linked lists. When
-studying [Elixir](https://elixir-lang.org) I saw this pattern many times in
-different examples [using
-recursion](https://elixir-lang.org/getting-started/recursion.html#reduce-and-map-algorithms).
+studying [Elixir](https://elixir-lang.org){:target="_blank"} I saw this pattern
+many times in different examples
+[using recursion](https://elixir-lang.org/getting-started/recursion.html#reduce-and-map-algorithms){:target="_blank"}.
 That's when I thought that maybe I could use recursion to parse also my scripts
 list arguments too.
 
@@ -131,4 +131,4 @@ makes your code more explicit and better split. Your main function doesn't know
 how the arguments are parsed and parsing the arguments doesn't have any other
 dependency. This way, each of the functions, on this example, has a single
 responsibility, following the [Single Responsibility
-Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
+Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle){:target="_blank"}.

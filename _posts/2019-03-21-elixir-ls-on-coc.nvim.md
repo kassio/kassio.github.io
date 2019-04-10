@@ -10,18 +10,19 @@ tags:
 If you have been followig the neovim udpates about what's to come on nvim
 0.4, you're probably excited with the new floating window feature. Well, I got
 very excited when I saw this [nvim's
-tweet](https://twitter.com/Neovim/status/1101893773561348096)
+tweet](https://twitter.com/Neovim/status/1101893773561348096){:target="_blank"}
 
 ![neovim-floating-window](/assets/nvim-floating-window.gif)
 
-This tweet shows how [coc.nvim](https://github.com/neoclide/coc.nvim) is getting
-ready for the new feature, so I decided to give it a try with elixir-ls.
+This tweet shows how [coc.nvim](https://github.com/neoclide/coc.nvim){:target="_blank"}
+is getting ready for the new feature, so I decided to give it a try with
+elixir-ls.
 
 There's a very good [blog
-post](https://www.mitchellhanberg.com/post/2018/10/18/how-to-use-elixir-ls-with-vim/)
-about how to use [elixir-ls](https://github.com/JakeBecker/elixir-ls) with
-[ale](https://github.com/w0rp/ale), but with this exciting news, I
-decided to try it with [coc.nvim](https://github.com/neoclide/coc.nvim).
+post](https://www.mitchellhanberg.com/post/2018/10/18/how-to-use-elixir-ls-with-vim/){:target="_blank"}
+about how to use [elixir-ls](https://github.com/JakeBecker/elixir-ls){:target="_blank"}
+with [ale](https://github.com/w0rp/ale){:target="_blank"}, but with this exciting
+news, I decided to try it with [coc.nvim](https://github.com/neoclide/coc.nvim){:target="_blank"}.
 
 I like to keep my tools dependencies updated, and when possible without any
 manual work to upgrade them. So I decided to try to use my vim plugin manager to
@@ -30,7 +31,7 @@ tools to download git repositories and most of them has support to do a post
 processing after downloading/updating the repo, it should be able to keep
 elixir-ls udpated.
 
-My vim plugin manager by choice is [minpac](https://github.com/k-takata/minpac),
+My vim plugin manager by choice is [minpac](https://github.com/k-takata/minpac){:target="_blank"},
 so my strategy was to create a function to compile/release elixir-ls after it's
 downloaded/updated. There's some boilerplate in the example, but it's just to
 keep the code more maintainable:
@@ -80,9 +81,9 @@ your vim plugins:
 
 ![installing compiling elixir-ls](/assets/coc.nvim.gif)
 
-I don't use [vim-plug](https://github.com/junegunn/vim-plug), but since it's one
-of the most popular vim plugins managers I decided to try my approach with it as
-well, and the code is actually very similar.
+I don't use [vim-plug](https://github.com/junegunn/vim-plug){:target="_blank"},
+but since it's one of the most popular vim plugins managers I decided to try my
+approach with it as well, and the code is actually very similar.
 ```vimscript
 let g:elixirls = {
   \ 'path': printf('%s/%s', stdpath('config'), 'bundle/elixir-ls'),
