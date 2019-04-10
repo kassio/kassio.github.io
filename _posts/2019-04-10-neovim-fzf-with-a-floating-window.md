@@ -53,6 +53,6 @@ endfunction
 ```
 
 #### Reference
-- https://github.com/junegunn/fzf.vim/issues/664
+- [https://github.com/junegunn/fzf.vim/issues/664](https://github.com/junegunn/fzf.vim/issues/664)
 
 And that's it.😁
