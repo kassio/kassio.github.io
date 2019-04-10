@@ -14,12 +14,13 @@ tweet](https://twitter.com/Neovim/status/1101893773561348096)
 
 ![neovim-floating-window](/assets/nvim-floating-window.gif)
 
-This tweet shows how [coc.nvim](https://github.com/neoclide/coc.nvim) is getting ready for the new feature, so I
-decided to give it a try with elixir-ls.
+This tweet shows how [coc.nvim](https://github.com/neoclide/coc.nvim) is getting
+ready for the new feature, so I decided to give it a try with elixir-ls.
 
 There's a very good [blog
 post](https://www.mitchellhanberg.com/post/2018/10/18/how-to-use-elixir-ls-with-vim/)
-about how to use [elixir-ls](https://github.com/JakeBecker/elixir-ls) with [ale](https://github.com/w0rp/ale), but with this exciting news, I
+about how to use [elixir-ls](https://github.com/JakeBecker/elixir-ls) with
+[ale](https://github.com/w0rp/ale), but with this exciting news, I
 decided to try it with [coc.nvim](https://github.com/neoclide/coc.nvim).
 
 I like to keep my tools dependencies updated, and when possible without any
@@ -29,10 +30,10 @@ tools to download git repositories and most of them has support to do a post
 processing after downloading/updating the repo, it should be able to keep
 elixir-ls udpated.
 
-My vim plugin manager by choice is [minpac](https://github.com/k-takata/minpac), so my strategy was to create a
-function to compile/release elixir-ls after it's downloaded/updated. There's
-some boilerplate in the example, but it's just to keep the code more
-maintainable:
+My vim plugin manager by choice is [minpac](https://github.com/k-takata/minpac),
+so my strategy was to create a function to compile/release elixir-ls after it's
+downloaded/updated. There's some boilerplate in the example, but it's just to
+keep the code more maintainable:
 
 ```vimscript
 let g:elixirls = {

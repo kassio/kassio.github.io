@@ -2,7 +2,7 @@
 layout: post
 title: new projects and good practices
 tags:
-  - thougts
+  - opinion
   - architecture
   - good practices
   - broken window
