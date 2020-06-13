@@ -3,19 +3,28 @@ email: kassioborgesm@gmail.com
 baseurl: ""
 url: "/"
 contact_list:
-  - name: "kassioborgesm@gmail.com"
-    url: "mailto:kassioborgesm@gmail.com"
-    icon: "icon-gmail.svg"
-  - name: kassioborgesm
-    url: "https://twitter.com/kassioborgesm"
-    icon: "icon-twitter.svg"
-  - name: kassioborges
-    url: "https://www.linkedin.com/in/kassioborges"
-    icon: "icon-linkedin.svg"
-  - name: kassio
+  - service: gitlab
+    name: kassio
+    url: "http://gitlab.com/kassio"
+    icon: "icon-gitlab.svg"
+  - service: github
+    name: kassio
     url: "http://github.com/kassio"
     icon: "icon-github.svg"
-  - name: "feed"
+  - service: linkedin
+    name: kassioborges
+    url: "https://www.linkedin.com/in/kassioborges"
+    icon: "icon-linkedin.svg"
+  - service: email
+    name: "kassioborgesm@gmail.com"
+    url: "mailto:kassioborgesm@gmail.com"
+    icon: "icon-email.svg"
+  - service: twitter
+    name: kassioborgesm
+    url: "https://twitter.com/kassioborgesm"
+    icon: "icon-twitter.svg"
+  - service: feed
+    name: "feed"
     url: "/feed.xml"
     icon: "icon-feed.svg"
 

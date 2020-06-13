@@ -1,13 +1,16 @@
 .site-header {
-  position: relative;
   min-height: 56px;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .site-title {
   font-size: 2.2em;
   font-weight: 400;
   letter-spacing: -1px;
+  width: 50%;
 
   &,
   &:visited {
@@ -24,19 +27,66 @@
   }
 }
 
-.site-nav {
-  float: right;
-  line-height: 100px;
-}
-
-
 .contact-list {
   margin-left: 0;
   list-style: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
 
   li {
+    margin: 0 .1em .2em;
+  }
+
+  .icon {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon > svg {
     display: inline-block;
-    margin-bottom: .2em;
+    vertical-align: middle;
+    width: $icon-size;
+    height: $icon-size;
+
+    path {
+      fill: $grey-color;
+    }
+
+    &:hover {
+      path {
+        fill: $text-color;
+      }
+    }
+  }
+
+  .icon-gitlab,
+  .icon-email {
+    background-color: $grey-color;
+
+    &:hover {
+      background-color:  $text-color;
+    }
+  }
+
+  .icon-gitlab > svg,
+  .icon-email > svg {
+    display: inline-block;
+    width: $icon-size;
+    height: $icon-size;
+    vertical-align: middle;
+
+    path, polygon, polyline {
+      fill: $background-color;
+    }
+
+    &:hover {
+      path, polygon, polyline {
+        fill: $background-color;
+      }
+    }
   }
 }
 

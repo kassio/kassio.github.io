@@ -154,23 +154,6 @@ pre {
   }
 }
 
-.icon > svg {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-
-  path {
-    fill: $grey-color;
-  }
-
-  &:hover {
-    path {
-      fill: $text-color;
-    }
-  }
-}
-
 .hide {
   display: none;
 }
