@@ -1,9 +1,6 @@
 ---
 layout: post
 title: neovim fzf with a floating window
-tags:
-- neovim
-date: 2019-04-10 23:07 +0100
 ---
 I [already mentioned]({{ site.baseurl }}{% post_url 2019-03-21-elixir-ls-on-coc.nvim %}){:target="_blank"}
 the floating window feature that's coming with the next version of neovim. This

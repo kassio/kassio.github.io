@@ -1,10 +1,6 @@
 ---
 layout: post
 title: "elixir-ls with coc.nvim"
-tags:
-  - neovim
-  - elixir
-  - lsp
 ---
 
 If you have been followig the neovim udpates about what's to come on nvim

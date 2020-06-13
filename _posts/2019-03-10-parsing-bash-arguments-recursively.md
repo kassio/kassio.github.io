@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Parsing bash arguments recursively"
-tags:
-  - bash
-  - recursion
 ---
 
 # The problem

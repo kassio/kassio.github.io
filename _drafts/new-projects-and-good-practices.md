@@ -1,11 +1,6 @@
 ---
 layout: post
 title: new projects and good practices
-tags:
-  - opinion
-  - architecture
-  - good practices
-  - broken window
 ---
 
 Following good practices is hard
