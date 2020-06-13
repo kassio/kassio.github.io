@@ -30,21 +30,6 @@
 }
 
 
-.site-footer {
-  padding: $spacing-unit 0;
-  border-top: 1px solid $grey-color-light;
-
-  .contact-list {
-    float: left;
-    width: 40%;
-  }
-}
-
-.footer-heading {
-  margin-bottom: $spacing-unit / 2;
-  font-size: 18px;
-}
-
 .contact-list {
   margin-left: 0;
   list-style: none;
@@ -127,51 +112,5 @@
     @include media-query($on-laptop) {
       font-size: 18px;
     }
-  }
-}
-
-.topics-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  li {
-    display: inline-block;
-  }
-
-  li a {
-    font-size: $small-font-size;
-    line-height: 1;
-    color: $grey-color;
-    text-decoration: none;
-  }
-}
-
-.all-topics {
-  font-size: 1.2em;
-  color: $text-color;
-}
-
-.topics {
-  list-style: none;
-}
-
-.topics.single .topic.show {
-  display: initial;
-}
-
-.topics.single .topic:not(.show) {
-  display: none;
-}
-
-.topic-title,
-.topic-title:visited {
-  color: $text-color;
-}
-
-.topic-post {
-  a,
-  a:visited {
-    color: $grey-color;
   }
 }
