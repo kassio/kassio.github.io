@@ -1,12 +1,48 @@
+body {
+  background-color: darken($background-color, 10%);
+}
+
+header,
+main {
+  background-color: $background-color;
+}
+
+main {
+  padding: 1em 2em;
+}
+
+
+h1,
+h2,
+h3 {
+  margin: $spacing-unit 0;
+}
+
+article {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &::before {
+      content: '»';
+      font-weight: 600;
+      margin-right: 1rem;
+      color: black;
+    }
+  }
+}
+
 .layout-header {
   min-height: 56px;
-  margin: 10px 0 50px;
+  padding: 10px 0 50px;
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
 }
 
 .site-title {
+  margin-left: 1em;
   font-size: 2.2em;
   font-weight: 400;
   letter-spacing: -1px;
@@ -98,12 +134,28 @@
   font-size: 20px;
 }
 
+.post-year {
+  font-size: 2.2em;
+  margin: 0;
+}
+
 .post-list {
   margin-left: 0;
   list-style: none;
 
   li {
     margin-bottom: 10px;
+    padding-left: 1em;
+
+    a {
+      display: inline-block;
+
+      &::before {
+        content: '⇒';
+        margin-right: .5em;
+        display: inline-block;
+      }
+    }
   }
 
   .post-link {
@@ -120,11 +172,23 @@
   }
 }
 
-.post {
-  .post-header {
-    margin-bottom: 20px;
+.post-header {
+  text-align: center;
+
+  h1 {
+    font-size: 2.2em;
+    margin: 0;
   }
 
+  .post-meta {
+    margin: 0;
+    margin-right: 2em;
+    text-align: right;
+    color: $grey-color;
+  }
+}
+
+.post {
   .post-title {
     font-size: 42px;
     line-height: 1;
@@ -135,12 +199,6 @@
     @include media-query($on-laptop) {
       font-size: 36px;
     }
-  }
-
-  .post-meta {
-    margin: 0;
-    text-align: right;
-    color: $grey-color;
   }
 
   .post-content {
@@ -168,6 +226,46 @@
       @include media-query($on-laptop) {
         font-size: 18px;
       }
+    }
+  }
+}
+
+blockquote {
+  font-size: 1.8em;
+  text-align: center;
+  border: 0;
+  margin: 1.5em 1em;
+  padding: 0;
+  font-family: serif;
+  line-height: 1.8em;
+
+  &::before {
+    content: '"';
+    font-size: 3em;
+    float: left;
+  }
+
+  &::after {
+    content: '"';
+    font-size: 3em;
+    float: right;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 2em;
+  }
+
+  .reference * {
+    display: block;
+    width: 100%;
+    font-size: 0.8em;
+    text-align: right;
+    font-style: normal;
+    color: $grey-color;
+
+    &::before {
+      content: '- '
     }
   }
 }
