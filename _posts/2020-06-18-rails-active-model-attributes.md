@@ -21,9 +21,6 @@ month. A nested list, like:
 
 ### [Querying the data](#querying-the-data)
 
-Postgres is a powerful database. Recently, I learned about its `array_agg`
-function, which, as you can imagine, aggregates a column and in an array.
-
 There's a few ways to do that, I'll explore how one could could query the
 database to retrieve the required data using the `array_agg` to fetch an array
 of the months for each year.
@@ -50,8 +47,8 @@ GROUP BY year;
 
 ## [Ruby on Rails side of things](#ruby-on-rails-side-of-things)
 
-I'll share here two ways, that I didn't see in many blog posts, about how to use
-this query in a Ruby on Rails application.
+I'll share here a few ways, that I didn't see in many blog posts, about how to
+use this query in a Ruby on Rails application.
 
 ### ["ReadOnly" Model](#readonly-model)
 
@@ -102,7 +99,7 @@ end
 #<PostCollection year: 2021, months: [1, 2, 3, 4, 5, 6]>]
 ```
 
-There are a few more tricks in that.
+There are a few tricks happening here:
 
 - `def readonly?` - The instances of this model cannot update the database.
 - `self.ignored_columns = columns.map(&:name)` - Ignore all the columns from the
@@ -190,12 +187,11 @@ module Types
 end
 ```
 
-As you can see in the code above, after _splitting_ the array this custom type
+As you can see in the code above, after _splitting_ the array, the custom type
 is _casting_ each object of the array in a given type. You can check what types
 Ruby on Rails provides by default [in this file](https://github.com/rails/rails/blob/master/activemodel/lib/active_model/type.rb)
 
-
-At last, the new custom type needs to be registered in the `ActiveModel::Type`,
+At last, the new `Array` type needs to be registered in the `ActiveModel::Type`,
 so we can add a initializer for that
 
 ```ruby
@@ -212,11 +208,11 @@ There's a very good blog post about that, by Leigh Halliday, [in here](https://p
 It depends.
 
 I don't think I'd use the `ReadOnly Model` approach, although it has less code,
-I think its _fake_ ActiveRecord behavior can mislead developers.
+I think its _fake_ ActiveRecord behavior can mislead other developers.
 
 Writing a Postgres View is nice, if the query is too complex I'd rather keep it
 in the database. However, it'd require to run migrations to update the query.
 
 So, if the query is not too complex I'd use the `ActiveModel::Model +
 ActiveModel::Attributes` approach. I think it requires a reasonable amount of
-moving pieces, but it, at least, doesn't mislead future developers.
+moving pieces, but it doesn't have the drawbacks of the other approachs.
