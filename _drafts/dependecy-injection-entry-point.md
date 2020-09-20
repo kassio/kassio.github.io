@@ -25,6 +25,9 @@ module Inheritance
     end
   end
 end
+
+Inheritance::CreateService.new(foo: 1).execute
+Inheritance::CreateFromTemplateService.new(foo: 1).execute
 ```
 
 
@@ -63,6 +66,14 @@ module RouterWithDecoratedDependencyInjection
     end
   end
 end
+
+
+RouterWithDecoratedDependencyInjection::CreateService.new(foo: 1)
+.execute
+RouterWithDecoratedDependencyInjection::CreateService.new(foo: 1)
+.execute(decorator: RouterWithDecoratedDependencyInjection::FromTemplate)
+RouterWithDecoratedDependencyInjection::CreateService.new(foo: 1)
+.execute(decorator: RouterWithDecoratedDependencyInjection::OtherBehavior)
 ```
 
 
@@ -107,4 +118,10 @@ module RouterWithDependencyInjection
     end
   end
 end
+
+RouterWithDependencyInjection::CreateService.new(foo: 1)
+.execute
+
+RouterWithDependencyInjection::CreateService.new(foo: 1)
+.execute(with: RouterWithDependencyInjection::FromTemplate)
 ```
