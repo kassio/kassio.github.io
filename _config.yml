@@ -1,7 +1,8 @@
 title: Kassio Borges
 email: kassioborgesm@gmail.com
+description: Some ruby, neovim, communication or anything else...
 baseurl: ""
-url: "/"
+url: "http://localhost:4000"
 contact_list:
   - service: gitlab
     name: kassio
