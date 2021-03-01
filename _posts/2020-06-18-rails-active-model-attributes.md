@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Postgres Array Aggregation on Ruby on Rails"
+title: Postgres Array Aggregation on Ruby on Rails
 ---
 
 ## [The problem](#the-problem)
