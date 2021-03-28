@@ -168,8 +168,7 @@ PG_LOG_FILE="log/postgres.log"
 stop_postgres() {
   pg_ctl stop
   exit 0
-}
-trap stop_postgres SIGINT SIGTERM
+}; trap stop_postgres INT TERM HUP QUIT KILL EXIT
 
 pg_ctl start -l "${PG_LOG_FILE}" && tail -f "${PG_LOG_FILE}"
 ```
