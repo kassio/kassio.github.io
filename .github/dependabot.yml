@@ -1,0 +1,23 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  versioning-strategy: increase-if-necessary
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  ignore:
+  - dependency-name: i18n
+    versions:
+    - 1.8.7
+    - 1.8.8
+    - 1.8.9
+  - dependency-name: concurrent-ruby
+    versions:
+    - 1.1.8
+  - dependency-name: listen
+    versions:
+    - 3.4.1
